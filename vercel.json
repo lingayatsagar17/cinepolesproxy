@@ -2,9 +2,12 @@
   "version": 2,
   "routes": [
     {
-      "src": "/",
+      "src": "/api/save_booking",
+      "dest": "https://if0_38189571.cinepoles.ct.ws/save_booking.php",
       "methods": ["POST"],
-      "dest": "/api/save_booking.js"
+      "headers": {
+        "Content-Type": "application/json"
+      }
     }
   ]
 }
