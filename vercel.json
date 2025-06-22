@@ -2,7 +2,8 @@
   "version": 2,
   "routes": [
     {
-      "src": "/save_booking",
+      "src": "/",
+      "methods": ["POST"],
       "dest": "/api/save_booking.js"
     }
   ]
