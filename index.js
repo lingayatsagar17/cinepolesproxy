@@ -4,14 +4,23 @@ export default async function handler(req, res) {
   }
 
   try {
-    const formBody = new URLSearchParams(req.body).toString();
+    let body = '';
+
+    // Collect form data manually from the request stream
+    await new Promise((resolve, reject) => {
+      req.on('data', chunk => {
+        body += chunk.toString();
+      });
+      req.on('end', resolve);
+      req.on('error', reject);
+    });
 
     const response = await fetch('https://cinepoles.ct.ws/save_booking.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: formBody
+      body: body
     });
 
     const result = await response.text();
