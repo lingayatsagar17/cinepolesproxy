@@ -4,10 +4,12 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch('https://cinepoles.ct.ws/save_booking.php', {
+    const response = await fetch('http://if0_38189571.cinepoles.ct.ws/save_booking.php', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(req.body)
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded' // match form encoding
+      },
+      body: new URLSearchParams(req.body).toString()
     });
 
     const result = await response.text();
