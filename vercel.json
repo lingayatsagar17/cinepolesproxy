@@ -2,9 +2,8 @@
   "version": 2,
   "routes": [
     {
-      "src": "/api/proxy",
-      "methods": ["POST"],
-      "dest": "/api/proxy.js"
+      "src": "/save_booking",
+      "dest": "/api/save_booking.js"
     }
   ]
 }
