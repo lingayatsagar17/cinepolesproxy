@@ -1,0 +1,23 @@
+{
+  "name": "cinepolesproxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingayatsagar17/cinepolesproxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lingayatsagar17/cinepolesproxy/issues"
+  },
+  "homepage": "https://github.com/lingayatsagar17/cinepolesproxy#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
