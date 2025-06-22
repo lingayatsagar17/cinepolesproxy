@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const response = await fetch('https://cinepoles.infinityfreeapp.com/save_booking.php', {
+    const response = await fetch('https://cinepoles.ct.ws/save_booking.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body)
